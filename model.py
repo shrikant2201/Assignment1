@@ -9,6 +9,9 @@ from sklearn.metrics import mean_squared_error
 X = np.random.rand(100, 1)
 y = 3 * X.squeeze() + 2 + np.random.randn(100) * 0.5
 
+# Set the artifact location to a relative path
+mlflow.set_tracking_uri("file://mlruns")
+
 # Split the data
 X_train, X_test, y_train, y_test = train_test_split(X,
                                                     y,

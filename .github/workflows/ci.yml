@@ -24,6 +24,11 @@ jobs:
         run: |
           pip install numpy scikit-learn pytest mlflow flake8
 
+      - name: Set up MLflow artifact location
+        run: |
+          mkdir -p mlruns
+          echo "MLFLOW_ARTIFACT_URI=file://$(pwd)/mlruns" >> $GITHUB_ENV
+
       - name: Lint with flake8
         run: |
           flake8 --max-line-length=88 .
