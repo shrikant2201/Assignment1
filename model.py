@@ -10,7 +10,7 @@ import os
 X = np.random.rand(100, 1)
 y = 3 * X.squeeze() + 2 + np.random.randn(100) * 0.5
 
-# Set the artifact location to a valid path
+# Set the artifact location to a valid directory
 artifact_uri = os.getenv('MLFLOW_ARTIFACT_URI', 'file://mlruns')
 mlflow.set_tracking_uri(artifact_uri)
 
