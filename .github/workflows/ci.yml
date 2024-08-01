@@ -1,0 +1,40 @@
+# .github/workflows/ci.yml
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scikit-learn
+
+      - name: Run model script
+        run: |
+          python model.py
+
+      - name: Lint with flake8
+        run: |
+          pip install flake8
+          flake8 --max-line-length=100 .
+      
+      - name: Test with pytest
+        run: |
+            pip install pytest
+            pytest
+
+      - name: Build Docker image
+        run: |
+            docker build -t my-ml-model .
