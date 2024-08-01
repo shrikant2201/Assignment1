@@ -1,0 +1,6 @@
+mlflow
+numpy
+scikit-learn
+pytest
+flake8
+# Add any other dependencies here
