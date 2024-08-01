@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/BITS/SEM-3/MLOps/Assignment/shrikant/Assignment1/mlruns/0/be1d981f8b8d484db8f2cbe29e06ee89/artifacts
+end_time: 1722508840584
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: be1d981f8b8d484db8f2cbe29e06ee89
+run_name: valuable-mouse-740
+run_uuid: be1d981f8b8d484db8f2cbe29e06ee89
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722508828598
+status: 3
+tags: []
+user_id: aqu7bs

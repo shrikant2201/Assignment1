@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/BITS/SEM-3/MLOps/Assignment/shrikant/Assignment1/mlruns/0/e1750c0f132a4e23b5f191f77af339fb/artifacts
+end_time: 1722508509005
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e1750c0f132a4e23b5f191f77af339fb
+run_name: amusing-pug-812
+run_uuid: e1750c0f132a4e23b5f191f77af339fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722508494622
+status: 3
+tags: []
+user_id: aqu7bs
