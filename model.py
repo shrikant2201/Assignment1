@@ -4,13 +4,15 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
+import os
 
 # Generate some random data
 X = np.random.rand(100, 1)
 y = 3 * X.squeeze() + 2 + np.random.randn(100) * 0.5
 
-# Set the artifact location to a relative path
-mlflow.set_tracking_uri("file://mlruns")
+# Set the artifact location to a valid path
+artifact_uri = os.getenv('MLFLOW_ARTIFACT_URI', 'file://mlruns')
+mlflow.set_tracking_uri(artifact_uri)
 
 # Split the data
 X_train, X_test, y_train, y_test = train_test_split(X,
