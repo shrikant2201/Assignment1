@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install numpy scikit-learn pytest mlflow flake8
 
       - name: Set up MLflow artifact location
         run: |
